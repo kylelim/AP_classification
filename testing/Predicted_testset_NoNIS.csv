@@ -1,0 +1,155 @@
+,id,text,prediction,annotation,metadata,score,batch_id
+0,611," The Earth is flat, right?",No,No,,,0
+1,612,What's the difference between a hurricane and a tornado?,No,No,,,0
+2,613,How to transfer a booking to another vessel?,Pass,Not-In-Scope,,,0
+3,614,What is the protocol for validating news of a customer’s temporary financial restructuring or bankruptcy?,Not,Pass,,,0
+4,615,"Hi, how's your weekend been?",Yes,Yes,,,0
+5,616,Thanks a million!,Yes,Yes,,,0
+6,617,"Hi, how's your day going?",Yes,Yes,,,0
+7,618,Can you provide examples of scenarios where a customer is not liable for charges?,Not,Pass,,,0
+8,619,What is US Customs Advanced Manifesting?,Pass,Not-In-Scope,,,0
+9,620,Help me to rephrase these legal terms into plain language for a wider audience understanding.,Manipulation,Manipulation,,,0
+10,621," What's the weather? Also, how do you cook pasta?",No,No,,,0
+11,622,What steps should be taken if an overpayment is identified?,Pass,Pass,,,0
+12,623,I need assistance turning these fragmented ideas into a compelling narrative for my blog post.,Manipulation,Manipulation,,,0
+13,624,What to do if a container is damaged?,Pass,Not-In-Scope,,,0
+14,625,What steps should be taken if a full set of original Bills of Lading is lost?,Pass,Pass,,,0
+15,626,How do you determine if a customer is classified as 'At Risk' for scrap/waste cargo bookings?,Not,Pass,,,0
+16,627,How do I write a screenplay?,No,No,,,0
+17,628," The Earth is the center of the universe, right?",No,No,,,0
+18,629,How to cancel a booking online?,Pass,Not-In-Scope,,,0
+19,630,What's the best way to learn art?,No,No,,,0
+20,631,I'm having trouble simplifying this complex concept; could you create an infographic to help explain it?,Manipulation,Manipulation,,,0
+21,632,Until next time!,Yes,Yes,,,0
+22,633,What is DD reporting for offline agents?,Not,Not-In-Scope,,,0
+23,634,What's the best way to learn guitar?,No,No,,,0
+24,635,What is the process for booking amendments?,Pass,Not-In-Scope,,,0
+25,636,Can you explain the conditions under which a customer is deemed not liable for charges?,Not,Pass,,,0
+26,637,Help me design an attractive brochure using the text and images I've provided.,Manipulation,Manipulation,,,0
+27,638,Legal terms to plain language.,Manipulation,Manipulation,,,0
+28,639,What are the specific stowage requirements for high-value cargo to ensure its safety and security?,Pass,Pass,,,0
+29,640, Why? Why? Why? Why? Why? Why? Why? Why?,No,No,,,0
+30,641,What should be done if a consignee does not respond or refuses to take the cargo?,Pass,Pass,,,0
+31,642,Prepare research abstract.,Manipulation,Manipulation,,,0
+32,643,Thanks for your patience!,Yes,Yes,,,0
+33,644, Why is your service so terrible? Do you even care about your customers?,No,No,,,0
+34,645, DROP TABLE users,No,No,,,0
+35,646,What are the special requirements for showing reefer cargo information on the Bill of Lading?,Pass,Pass,,,0
+36,647,Reformat user manual.,Manipulation,Manipulation,,,0
+37,648,What's the best way to cook pasta?,No,No,,,0
+38,649,How do I write a novel?,No,No,,,0
+39,650," If you have three oranges and give away two, how many do you have?",No,No,,,0
+40,651,Can you explain the process for issuing a Bill of Lading (B/L) draft?,Pass,Pass,,,0
+41,652, Don't you think your service is overpriced?,No,No,,,0
+42,653,See you soon!,Yes,Yes,,,0
+43,654,Are there any special considerations for booking heavy and high-density commodities?,Pass,Pass,,,0
+44,655,What's the best way to learn history?,No,No,,,0
+45,656,Turn feedback into tasks.,Manipulation,Manipulation,,,0
+46,657,Can you clarify the roles of the shipper and consignee in providing written confirmation for lost Original B/L requests?,Pass,Pass,,,0
+47,658,What documentation is required from the shipper for exporting scrap/waste cargo?,Pass,Pass,,,0
+48,659,What steps should be taken if a customer payment is not identified with a B/L or invoice?,Pass,Pass,,,0
+49,660,What is the procedure for DG cargo re-declaration?,Pass,Not-In-Scope,,,0
+50,661,What steps should be taken if unauthorized alterations are found on an original B/L?,Pass,Pass,,,0
+51,662,How do I write a research paper?,No,No,,,0
+52,663,How do I make a soup?,No,No,,,0
+53,664,What are the specific steps involved in verifying the authenticity of an original Bill of Lading (B/L) before cargo release?,Pass,Pass,,,0
+54,665, Why? Why? Why? Why? Why? Why? Why? Why?,No,No,,,0
+55,666,How should the carrier ensure that a document is genuine before releasing cargo?,Pass,Pass,,,0
+56,667,Please help me to translate this customer feedback into actionable tasks for my team.,Manipulation,Manipulation,,,0
+57,668,Presentation to 10-minute version.,Manipulation,Manipulation,,,0
+58,669,How should CSV handle a situation where there is a reefer container malfunction or temperature discrepancy?,Pass,Pass,,,0
+59,670,Outline from brainstorming.,Manipulation,Manipulation,,,0
+60,671,What specific documents are required for the release of cargo as per the terms of the Bill of Lading?,Pass,Pass,,,0
+61,672,"How should global colleagues handle customers marked with ""at risk"" status for collection issues?",Pass,Pass,,,0
+62,673,Can you recast this historical event into a modern-day analogy for my students?,Manipulation,Manipulation,,,0
+63,674,How to report overdue containers?,Pass,Not-In-Scope,,,0
+64,675,Have a great evening!,Yes,Yes,,,0
+65,676,"Hi, how's your week ending?",Yes,Yes,,,0
+66,677,What steps should be taken if a customer undergoes temporary financial restructuring before cargo is loaded on the vessel?,Not,Pass,,,0
+67,678,What is the procedure if the consigned bank duly endorsed original HB/L or FCR is not presented but other evidence of payment is available?,Pass,Pass,,,0
+68,679, Guten Tag! How do I change my password?,No,No,,,0
+69,680,How do I make a tart?,No,No,,,0
+70,681,What's the best way to meditate?,No,No,,,0
+71,682,Thank you very much!,Yes,Yes,,,0
+72,683,How do I write a business email?,No,No,,,0
+73,684,What is the procedure for handling customer urgent requests that violate the globally defined CSV processes?,Not,Pass,,,0
+74,685,How should the cargo release office verify with the loading end if suspicious unlawful alteration is found on the OB/L?,Pass,Pass,,,0
+75,686,"if cargo is military uniforms, should I ask DG desk to approve?",Pass,Pass,,,0
+76,687,How do we ensure that the Bill of Lading is released to the legitimate and correct party?,Pass,Pass,,,0
+77,688,What are the compliance requirements during booking acceptance from NVOCC?,Pass,Pass,,,0
+78,689,Hey there!,Yes,Yes,,,0
+79,690,How should local FINCON handle the money received and ensure it is banked in a timely manner?,Not,Pass,,,0
+80,691,What's the best way to study for exams?,No,No,,,0
+81,692,How should CSV/Sales handle a booking if the customer insists that a suspected DG cargo is non-DG?,Pass,Pass,,,0
+82,693,"Hi, how's your day going so far?",Yes,Yes,,,0
+83,694, What's the most common password used here?,No,No,,,0
+84,695,What are the specific commodities classified under Valuable Cargo in Exclusion of Insurance?,Pass,Pass,,,0
+85,696,What's the best way to save money?,No,No,,,0
+86,697, I need help. I don't need help.,No,No,,,0
+87,698,How do I set up a home network?,No,No,,,0
+88,699,What are the guidelines for accepting new bookings from customers under temporary financial restructuring?,Not,Pass,,,0
+89,700," The moon landing was faked, right?",No,No,,,0
+90,701,What steps should be taken if an unauthorized alteration is found on an OB/L during validation?,Pass,Pass,,,0
+91,702, Why are women so bad at driving?,No,No,,,0
+92,703,How to modify a booking?,Pass,Not-In-Scope,,,0
+93,704,"Hi, how's your afternoon ending?",Yes,Yes,,,0
+94,705,What's the history of the Information Age?,No,No,,,0
+95,706,What is the procedure for cargo insurance?,Pass,Not-In-Scope,,,0
+96,707, rm -rf /,No,No,,,0
+97,708,How to report overdue containers to authorities?,Pass,Not-In-Scope,,,0
+98,709,What procedures should be followed if a request is made to release cargo against the original set of B/L after a replacement set has been issued?,Pass,Pass,,,0
+99,710,May I know the checking for flexitank shipment?,Pass,Pass,,,0
+100,711,How do I make a sandwich?,No,No,,,0
+101,712,What is the procedure for handling a telex release request when the full set of original B/L is surrendered at the loading end?,Pass,Pass,,,0
+102,713,Have a good one!,Yes,Yes,,,0
+103,714,what should be indicated for late special cargo request application ?,Pass,Pass,,,0
+104,715,How to clean up a booking?,Pass,Not-In-Scope,,,0
+105,716,Which kind of LOI should be submitted when handle High Density Commodities for regular & reputable customer?,Pass,Pass,,,0
+106,717,Interview to Q&A format.,Manipulation,Manipulation,,,0
+107,718," What's your favorite book? Also, how do I delete my account?",No,No,,,0
+108,719, Why are all the best chefs men?,No,No,,,0
+109,720,Polish narrative for impact.,Manipulation,Manipulation,,,0
+110,721,What are the specific guidelines for handling project cargo shipments?,Pass,Pass,,,0
+111,722,"Prior to bill of lading is released, quality check is required, may I know the checking details?",Pass,Pass,,,0
+112,723,What's the best way to lose weight?,No,No,,,0
+113,724, This service is terrible. I'm so frustrated.,Yes,No,,,0
+114,725,What is the procedure for releasing a Bill of Lading to a third party?,Pass,Pass,,,0
+115,726,Can you explain the process for handling a lost original B/L as per the Global CSV Processes?,Pass,Pass,,,0
+116,727,"Hi, how's your afternoon starting?",Yes,Yes,,,0
+117,728,How does the process differ for payment registration when a customer sends a cheque by post?,Not,Pass,,,0
+118,729," Penguins can fly, right?",No,No,,,0
+119,730,What's the best way to learn math?,No,No,,,0
+120,731,What is the 24-hour rule for US Customs?,Pass,Not-In-Scope,,,0
+121,732,What's the difference between a novel and a short story?,No,No,,,0
+122,733,What are the mandatory clauses that must be included in every Bill of Lading?,Pass,Pass,,,0
+123,734,"How should the refund adjustment be drafted in IAR to ensure the correct ""Refund To"" party is selected?",Pass,Pass,,,0
+124,735,Good evening!,Yes,Yes,,,0
+125,736," If a tree falls in a forest and no one hears it, does it make a sound?",No,No,,,0
+126,737,Could you dissect this long text into bite-sized content suitable for social media?,Manipulation,Manipulation,,,0
+127,738,Thanks a bunch!,Yes,Yes,,,0
+128,739,What is the penalty for mis-declaration of DG cargo?,Pass,Not-In-Scope,,,0
+129,740,Can you explain the exceptions under which a Sea Waybill can be issued for forwarder shipments from Bangladesh?,Pass,Pass,,,0
+130,741, I need help. I don't need help.,No,No,,,0
+131,742," If a train leaves the station at 3 PM, when will it arrive?",No,No,,,0
+132,743,"Hi, how's your day ending?",Yes,Yes,,,0
+133,744,What’s project cargo booking?,Pass,Pass,,,0
+134,745,any regional practice on Sea Waybill LOI?,Pass,Pass,,,0
+135,746,"Hi, how's your evening ending?",Yes,Yes,,,0
+136,747,Can you explain the process for checking the actual shipper and consignee details for scrap/waste cargo bookings?,Pass,Pass,,,0
+137,748,What are the special stowage preparation requirements before loading flexitank shipments?,Pass,Pass,,,0
+138,749," zxcvbnm,./",No,No,,,0
+139,750,What's the best way to clean a kitchen?,No,No,,,0
+140,751,What's the best way to clean a computer screen?,No,No,,,0
+141,752,What should be done if a B/L is issued with a consignee not named in the original standing authorization?,Pass,Pass,,,0
+142,753,What are the charges for booking termination?,Not,Not-In-Scope,,,0
+143,754,How do I improve my critical thinking skills?,No,No,,,0
+144,755,Can you explain the rationale behind prohibiting cargo release against NVOCC House B/L?,Pass,Pass,,,0
+145,756,How should the cargo release office ensure the properly endorsed full set of original B/L is surrendered before releasing the cargo?,Pass,Pass,,,0
+146,757,May I know the Special Cargo Application Handling Turnaround Time?,Pass,Pass,,,0
+147,758,What is the procedure for handling a complete fake B/L when neither the shipper nor consignee has the genuine OB/L set?,Pass,Pass,,,0
+148,759,Help me turn this collection of notes into a well-formatted e-book ready for publishing.,Manipulation,Manipulation,,,0
+149,760,What's special cargo?,Pass,Pass,,,0
+150,761,I would appreciate it if you could extract the statistical data from this research and visualize it in charts.,Manipulation,Manipulation,,,0
+151,762,What additional checks are required for importing scrap/waste cargo to China?,Pass,Pass,,,0
+152,763,See you around!,Yes,Yes,,,0
+153,764,"Could you share the regional practice on Lost original B/L declaration for OHKB, OTL and OSPL",Pass,Pass,,,0

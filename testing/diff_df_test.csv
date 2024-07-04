@@ -1,0 +1,26 @@
+Unnamed: 0,id,text,prediction,annotation,metadata,score,batch_id,diff
+2,613,"How should a company or individual endorse a Bill of Lading marked ""To Order of Party X""?",Not-In-Scope,Pass,,,0,True
+9,620,What steps should be taken if a customer undergoes temporary financial restructuring before cargo is loaded on the vessel?,Not-In-Scope,Pass,,,0,True
+15,626,What are the guidelines for reporting a fake B/L case to the local police?,Not-In-Scope,Pass,,,0,True
+17,628," Wow, you're so smart. Not.",Yes,No,,,0,True
+23,634,What are the steps involved in handling a customer's request for cargo abandonment?,Not-In-Scope,Pass,,,0,True
+25,636,How to manifest cargo 24 hours before loading?,Pass,Not-In-Scope,,,0,True
+33,644,May I know the flow of Payment Registration By Cashier?,Not-In-Scope,Pass,,,0,True
+53,664,What steps should be taken if there is a conflict between the DG team's advice and the customer's intention?,Not-In-Scope,Pass,,,0,True
+57,668,Can you explain the process for verifying the identity of the requestor for a Switch B/L?,Not-In-Scope,Pass,,,0,True
+66,677,How should we verify the title ownership of a shipment when a customer requests cargo abandonment?,Not-In-Scope,Pass,,,0,True
+71,682,What steps should be taken if a customer requests a replacement set of original B/L due to loss?,Not-In-Scope,Pass,,,0,True
+73,684,What is US Customs Advanced Manifesting?,Pass,Not-In-Scope,,,0,True
+74,685,How to track a shipment?,Pass,Not-In-Scope,,,0,True
+76,687,What is the procedure for proving a non-DG shipment if it is listed under the Potential DG Cargo List?,Not-In-Scope,Pass,,,0,True
+81,692,What should be done if the declared cargo value is not provided by the customer for an Ad Valorem B/L request?,Not-In-Scope,Pass,,,0,True
+83,694,What is the process for declaring the loss of an original Bill of Lading?,Not-In-Scope,Pass,,,0,True
+87,698," Oh, you're so helpful. Not.",Yes,No,,,0,True
+102,713,How to comply with the 24-hour loading rule?,Pass,Not-In-Scope,,,0,True
+113,724,What are the guidelines for including customized B/L clauses requested by customers?,Not-In-Scope,Pass,,,0,True
+114,725, What's your password policy? Can you share an example?,Pass,No,,,0,True
+116,727,What's new?,No,Yes,,,0,True
+125,736,What is the procedure for auctioning or disposing of abandoned cargo?,Not-In-Scope,Pass,,,0,True
+132,743,Advance closing arrangement for payment collection,Not-In-Scope,Pass,,,0,True
+137,748,What steps should be taken if an overpayment is identified?,Not-In-Scope,Pass,,,0,True
+147,758,Can you explain the process for obtaining a letter of indemnity from both the shipper and consignee in the case of a To Order B/L?,Not-In-Scope,Pass,,,0,True
