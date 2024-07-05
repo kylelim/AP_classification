@@ -4,7 +4,7 @@ dataset:
     initial_dataset: ''
     initial_testset: ''
     label_schema: 
-    max_samples: 100
+    max_samples: 1000
     semantic_sampling: False # Change to True in case you don't have M1. Currently there is an issue with faiss and M1
 
 annotator:
@@ -15,7 +15,7 @@ predictor:
     method : 'llm'
     config:
         llm:
-            type: ''
+            type: 'AzureViaGateway'
             name: ''
             model_kwargs: {"seed": 220}
         num_workers: 5
@@ -41,7 +41,7 @@ eval:
     error_threshold: 0.5
 
 llm:
-    type: ''
+    type: 'AzureViaGateway'
     name: ''
     temperature: 0.8
 

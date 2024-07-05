@@ -20,6 +20,16 @@ class Color:
     BLUE = '\033[94m'
     END = '\033[0m'  # Reset to default color
 
+def set_env_var():
+    os.environ["KEYCLOAK_BASE_URL"] = ""
+    os.environ["KEYCLOAK_CLIENT_ID"] = ""
+    os.environ["KEYCLOAK_CLIENT_SECRET"] = ""
+    os.environ["KEYCLOAK_REALM"] = "" 
+    os.environ["KEYCLOAK_TOKEN_URL"] = ""
+    os.environ["ENV"] = "" 
+    os.environ["MLOP_HOST"] = "" 
+    os.environ["SUPP_DATA_HOST"] = ""
+        
 def getMlopKey():
     url = os.getenv("KEYCLOAK_TOKEN_URL")
     client_id = os.getenv("KEYCLOAK_CLIENT_ID")
@@ -30,17 +40,6 @@ def getMlopKey():
     responseJson = response.json()
     access_token = responseJson['access_token']
     os.environ['MLOP_ACCESS_TOKEN'] = access_token
-
-def set_env_var():
-        
-        os.environ["KEYCLOAK_BASE_URL"] = "https://iamfw.home-np.oocl.com"
-        os.environ["KEYCLOAK_CLIENT_ID"] = "mro_kf_chui"
-        os.environ["KEYCLOAK_CLIENT_SECRET"] = "HAjxgG4EwcnYkCj7D68oticjW9w75rSO"
-        os.environ["KEYCLOAK_REALM"] = "oocl-dev" 
-        os.environ["KEYCLOAK_TOKEN_URL"] = "https://iamfw.home-np.oocl.com" + '/auth/realms/' + "oocl-dev" + '/protocol/openid-connect/token' 
-        os.environ["ENV"] = "local" 
-        os.environ["MLOP_HOST"] = "https://mlop-llm-gateway-dev.home-np.oocl.com" 
-        os.environ["SUPP_DATA_HOST"] = "https://iacb-supp-data-dev.a.home-np.oocl.com"
 
 def get_llm(config: dict):
     """
