@@ -187,9 +187,6 @@ class OptimizationPipeline:
         logging.info('Running Predictor')
         records = self.predictor.apply(self.dataset, self.batch_id, leq=True)
         self.dataset.update(records)
-
-        print(records)
-
         self.eval.dataset = self.dataset.get_leq(self.batch_id)
         self.eval.eval_score()
         
