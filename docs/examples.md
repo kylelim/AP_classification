@@ -21,14 +21,6 @@ Required Resources: Annotated dataset, with no header and two column: question a
 
 1. Goes to DScreator.ipynb
 
-```
-dataset:
-    name: 'dataset'
-    records_path: null
-    initial_dataset: 'dump/dataset.csv'
-    label_schema: ["Yes", "No"]
-    max_samples: 50
-```
 2. Fill up the path of the annotated dataset in the jupyter notebook
 ```
 excel_data = pd.read_excel('path pf your dataset here', header = None, names=['text', 'label'])
@@ -43,48 +35,56 @@ df.batch_id = [_//batch_size for _ in range(len(df))]
 
 4. Complete and obtain the dataset for auto prompting.
 
-### Movie Genre Identification (Multi-label classification):
+### Generate initial prompt for auto prompting:
 
-In this example, we want to segment movie reviews into pre-defined genres. The initial prompt and task description might look like this: 
- - Initial prompt: "Based on the following movie review, what genre is this movie? Select between Action, Comedy, Drama, Romance or Horror."
- - Task description: "Assistant is an expert cinema critic for all genres, and is tasked with classifying other movie reviews."
+In this example, we want to generate an well-structured initial prompt for auto prompting
 
-#### Run Example
-For this multi-label classification, update the `label_schema` in `config/config_default.yml`
-```
-dataset:
-    label_schema: ["Action", "Comedy", "Drama", "Romance", "Horror"]
-```
-And then simply run the pipeline with the corresponding input parameters:
-```bash
-> python run_pipeline.py \
-    --prompt "Based on the following movie review, what genre is this movie? Select between Action, Comedy, Drama, Romance or Horror." \
-    --task_description "Assistant is an expert cinema critic for all genres, and is tasked with classifying other movie reviews."
-```
-Please follow the same annotation and monitoring procedures as shown in the previous example.
+1. Goes to initialPromptCreator.ipynb
 
-### Rating Movie Reviews (Scoring task):
-In this example, we aim to score (rank) the movie reviews based on various criteria, assigning a numerical rating to each
-
-We'll start with a simple initial prompt: 
- - Initial prompt: "How well is this movie review written? Give it a score between 1 and 5, with 1 being the lowest score."
- - Task description: "Assistant is an expert cinema reviewer and editor, and is tasked with scoring other movie reviews."
-
-Note that although this task involves scoring, it is treated as a classification task, similar to the examples above.
-
-#### Run Example
-To run this task, update the `label_scheme` in the input `config/config_default.yml` config file:
+2. Set up the environment for LLM gateway here
 ```
-dataset:
-    label_schema: ["1", "2", "3", "4", "5"]
+def getMlopKey():
+    url = os.getenv("KEYCLOAK_TOKEN_URL")
+    client_id = os.getenv("KEYCLOAK_CLIENT_ID")
+    client_secret = os.getenv("KEYCLOAK_CLIENT_SECRET")
+    header = {"Request-client": "IAM_PORTAL", "Content-Type": "application/x-www-form-urlencoded"}
+    data = {"grant_type": "client_credentials", "client_id": client_id, "client_secret": client_secret}
+    response = requests.post(url, headers=header, data=data)
+    responseJson = response.json()
+    access_token = responseJson['access_token']
+    os.environ['MLOP_ACCESS_TOKEN'] = access_token
+
+def set_env_var(): #to be filled
+        
+        os.environ["KEYCLOAK_BASE_URL"] = "" 
+        os.environ["KEYCLOAK_CLIENT_ID"] = ""
+        os.environ["KEYCLOAK_CLIENT_SECRET"] = ""
+        os.environ["KEYCLOAK_REALM"] = ""
+        os.environ["KEYCLOAK_TOKEN_URL"] = ""
+        os.environ["ENV"] = "local"
+        os.environ["MLOP_HOST"] = ""
+
+
+def get_llm_client():
+    set_env_var()
+    getMlopKey()
+    llmClient = AzureChatOpenAI(
+                deployment_name="",
+                azure_endpoint=os.getenv("MLOP_HOST"),
+                openai_api_version="2024-02-01",
+                temperature=0.8,
+                openai_api_key=os.getenv("MLOP_ACCESS_TOKEN"),
+    )
+    
+    return llmClient
 ```
-And then simply use the input parameters to run the pipeline:
-```bash
-> python run_pipeline.py \
-    --prompt "How well is this movie review written? Give it a score between 1 and 5, with 1 being the lowest score." \
-    --task_description "Assistant is an expert cinema reviewer and editor, and is tasked with scoring other movie reviews."
-```
-Follow the same steps as in the simple classification example for running the pipeline and annotating through the Argilla UI.
+
+3. Input user enquiry
+Based on the need, input the user enquiry.
+
+4. Obtain the initial prompt
+    Please note that initial prompt might require manual modification to make it conform to the requirement of the business use case
+
 
 ### Generating Movie Reviews (Generation task):
 Here, we aim to generate good (insightful and comprehensive) movie reviews from scratch. The initial prompt might look something like this: 
