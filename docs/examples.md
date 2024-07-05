@@ -5,7 +5,7 @@ This document provides practical examples of using the AutoPrompt pipeline acros
 
 
 1. Dataset Generation
-2. [Movie Genre Identification (Multi-label classification task)](#movie-genre-identification-multi-label-classification)
+2. Initial Prompt Generation
 3. [Rating Movie Reviews (Scoring task)](#rating-movie-reviews-scoring-task)
 4. [Generating Movie Reviews (Generation task)](#generating-movie-reviews-generation-task)
 5. [Single Topic Moderation](#single-topic-moderation)
