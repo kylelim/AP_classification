@@ -33,17 +33,6 @@ Set your OpenAI API key in the configuration file `config/llm_env.yml`. For assi
 
 - **Configure your Predictor**.  We employ a predictor to estimate prompt performance. The default predictor LLM is GPT-3.5. Configuration is located in the `predictor` section of `config/config_default.yml`.
 
-### Configure Human-in-the-Loop Annotator 
-
-Our pipeline incorporates a human-in-the-loop annotation process using [Argilla](https://docs.argilla.io/en/latest/index.html). Follow these steps to set it up:
-
-1. **Set Up Argilla Server and UI:** Follow the [instructions](https://docs.argilla.io/en/latest/getting_started/quickstart_installation.html) to install and set up an Argilla server and user interface.
-
-2. **Quick Installation Option:** For a faster setup, we recommend deploying Argilla on a Hugging Face [space](https://huggingface.co/new-space?template=argilla/argilla-template-space).
-
-3. **Configure API Settings:** After setting up the server, modify the `api_url` and `api_key` in the `config/config_default.yml` file. For instance, if using the recommended Hugging Face space, your API URL should be formatted as follows: `api_url: 'https://<your-argilla-space-name>.hf.space'`.
-
-
 ### Configure LLM Annotator 
 
 To specify an LLM as the annotation tool in your pipeline, update the `annotator` section in the `config/config_default.yml` file as follows:
@@ -64,12 +53,3 @@ annotator:
         mode: 'annotation'
 ```
 We recommend using a robust LLM, like GPT-4, for annotation purposes. In the `instruction` field, you specify the task instructions for the annotation. The `mini_batch_size` field determines the number of samples processed in a single annotation pass, allowing you to balance efficiency with LLM token usage.
-
-
-### Monitoring: Weights and Biases Setup
-
-To effectively track your optimization process, including metrics like score, prompts instances, and error analysis  across iterations, we recommend using [Weights and Biases](https://wandb.ai/site).
-
-1. **Sign Up for Weights and Biases:** Visit their [website](https://wandb.ai/site) and follow the instructions to create an account.
-
-2. **Enable wandb in Your Configuration:** In your project's `config/config_default.yml` file, set `use_wandb` to `True` to activate wandb support.
