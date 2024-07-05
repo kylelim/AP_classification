@@ -4,7 +4,7 @@
 This document provides practical examples of using the AutoPrompt pipeline across various scenarios. It focuses on movie review and chat moderation tasks to demonstrate the flexibility and effectiveness of the AutoPrompt framework.
 
 
-1. [Filtering Movie Reviews with Spoilers (Classification task)](#filtering-movie-reviews-with-spoilers-i-task)
+1. Dataset Generation
 2. [Movie Genre Identification (Multi-label classification task)](#movie-genre-identification-multi-label-classification)
 3. [Rating Movie Reviews (Scoring task)](#rating-movie-reviews-scoring-task)
 4. [Generating Movie Reviews (Generation task)](#generating-movie-reviews-generation-task)
