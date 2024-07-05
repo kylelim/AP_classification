@@ -11,17 +11,15 @@ This document provides practical examples of using the AutoPrompt pipeline acros
 5. [Single Topic Moderation](#single-topic-moderation)
 6. [Multi-Topic Moderation (Prompt squeezing task)](#multi-topic-moderation-prompt-squeezing)
 
-### Filtering Movie Reviews with Spoilers (Classification task)
+### Generating Dataset for auto prompting pipeline
 
-In this binary classification example, we aim to filter out movie reviews containing spoilers for a specific movie. A correctly implemented filter can be a powerful tool in a large-scale movie review system.
+In this example, we aim to create training and testing dataset based on the labelled dataset.
 
-We'll start with a simple initial prompt and task description: 
- - Initial prompt: “Does this movie review contain a spoiler? answer Yes or No”<br>
- - Task description: “Assistant is an expert classifier that will classify a movie review, and let the user know if it contains a spoiler for the reviewed movie or not.”
+Required Resources: Annotated dataset, with no header and two column: question and corresponding answer.
 
 #### Steps to Run Example
 
-1. Configure your labels by editing `config/config_default.yml`. Modify the `label_schema` in the `dataset` section to include only 'Yes' and 'No' options.
+1. Goes to DScreator.ipynb
 
 ```
 dataset:
@@ -31,65 +29,19 @@ dataset:
     label_schema: ["Yes", "No"]
     max_samples: 50
 ```
-2. Run the main pipeline from an IDE or the command line
-```bash
-> python run_pipeline.py
+2. Fill up the path of the annotated dataset in the jupyter notebook
+```
+excel_data = pd.read_excel('path pf your dataset here', header = None, names=['text', 'label'])
 ```
 
-*Note*: Without input parameters, the pipeline prompts the user to provide them. Alternatively, specify initial prompt and task description as command-line arguments:
-```bash
-> python run_pipeline.py \
-    --prompt "Does this movie review contain a spoiler? answer Yes or No" \
-    --task_description "Assistant is an expert classifier that will classify a movie review, and let the user know if it contains a spoiler for the reviewed movie or not."
+3. Specify the batch size for training set in the jupyter notebook
+```
+batch_size = 60 ##Specify here
+
+df.batch_id = [_//batch_size for _ in range(len(df))]
 ```
 
-3. A browser window displaying the Argilla workspace will open for manual annotations
-![argilla_example](./argilla_movie_spoilers_example.png)
-
-Annotate the generated examples as they appear and monitor the pipeline's progress. Control the number of optimization iterations with the `num_steps` parameter, specified at start:
-```bash
-> python run_pipeline.py --num_steps 30
-```
-The pipeline concludes after reaching the `num_steps` or meeting a predefined stop criteria, defined in `config/config_default.yml`:
-```
-stop_criteria:
-    max_usage: 0.5  # Max budget for optimization (USD for OpenAI's LLM model)
-    patience: 3     # Number of iterations to wait for improvement
-    min_delta: 0.05 # Minimum improvement between iterations
-```
-Note that the framework also supports using an LLM as the annotator, see setup instructions [here](installation.md#configure-llm-annotator).
-
-4. After completion, the pipeline outputs a **refined (calibrated) prompt** tailored for the task and a reference **benchmark** with challenging samples. In this example, the final spoiler identification prompt might be:
-
-```
-Review Spoiler Identification Protocol: For the task of classifying IMDB reviews for
-the presence of spoilers, the classifier must label reviews with a heightened sensitivity to
-nuanced language and indirect spoiler cues. The classification labels are ’Yes’ for spoilers
-and ’No’ for non-spoilers. Apply the following criteria rigorously: Label ’Yes’ if a review: -
-Contains subtle references or nuanced language that hints at plot developments or character
-arcs, without explicit detail. - Includes emotional responses or descriptive language that
-indirectly reveals plot outcomes or twists. - Employs suggestive language that points to future
-events or endings, even if it does not reveal specific information. Label ’No’ if a review: -
-Discusses technical aspects, acting, direction, or personal viewer impressions in a manner
-that does not hint at or reveal any plot details. - Comments on thematic elements, genre
-characteristics, or storytelling techniques without disclosing or implying crucial plot twists.
-```
-
-- The framework automatically saves the benchmark, run log, and a checkpoint file (which stores the state of the optimization, enabling seamless continuation from a previous run) in a default `dump` path, adjustable with the `--output_dump` command line argument.
-- Note that the steps above are relevant to all classification and generation tasks. See the following examples for more use cases. 
-
-5. Until now, we've initiated the pipeline with just an initial prompt and task description. However, you can also include a few examples by specifying an initial dataset in the `initial_dataset` field within the `dataset` section of the `config/config_default.yml` file. For example:
-```
-dataset:
-    initial_dataset: 'dump/dataset.csv'
-```
-An example of an initial dataset with two samples is shown below:
-```
-id,text,prediction,annotation,metadata,score,batch_id
-0,"The cinematography was mesmerizing, especially during the scene where they finally reveal the mysterious room that captivated the main character.",No,Yes,,,0
-1,"The director's bold choice to leave the world's fate unclear until the final frame will spark audience discussions.",No,Yes,,,0
-```
-
+4. Complete and obtain the dataset for auto prompting.
 
 ### Movie Genre Identification (Multi-label classification):
 
