@@ -6,7 +6,9 @@
 
 **Auto Prompt is a prompt optimization framework designed to enhance prompts for real-world use cases.**
 
-The framework automatically generates high-quality, detailed prompts tailored to user intentions. It employs a refinement (calibration) process, where it iteratively builds a dataset of challenging edge cases and optimizes the prompt accordingly. This framework is modified from [Auto Prompt](https://github.com/Eladlev/AutoPrompt/blob/main/README.md).
+*This framework is modified from [Auto Prompt](https://github.com/Eladlev/AutoPrompt/blob/main/README.md). For more set up information, it is suggested to visit the original repo.*
+
+The framework automatically generates high-quality, detailed prompts tailored to user intentions. It employs a refinement (calibration) process, where it iteratively builds a dataset of challenging edge cases and optimizes the prompt accordingly. 
 
 # Why Auto Prompt?
 - **Prompt Engineering Challenges.** The quality of LLMs greatly depends on the prompts used. Even [minor changes](#prompt-sensitivity-example) can significantly affect their performance. 
